@@ -1,74 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Reinald Mendes</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reinald Mendes • Desenvolvedor Fullstack</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: #ccc;
+    }
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .stack, .projects, .contact {
+      margin-bottom: 40px;
+    }
+    .stack ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+    .stack li {
+      background: #e0e0e0;
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      font-weight: bold;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    .project a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Reinald Mendes dos Santos</h1>
-    <p>Analista de Sistemas | Full Stack | Data Science | APIs</p>
-    <a href="https://www.linkedin.com/in/reinald-mendes-b712b9182/" target="_blank">LinkedIn</a>
-  </header>
 
-  <main>
-    <section class="perfil">
-      <h2>Perfil Profissional</h2>
-      <p>
-        Desenvolvedor Full Stack com experiência em sistemas web, análise de dados e integrações de APIs. Especialista em Node.js, Vue.js, PHP, MongoDB e Power BI. Atua com foco em inovação, impacto social e eficiência tecnológica.
-      </p>
-    </section>
+<header>
+  <h1>Reinald Mendes</h1>
+  <p>Desenvolvedor Fullstack • PHP • Node.js • Vue • React Native • MongoDB</p>
+</header>
 
-    <section class="projetos">
-      <h2>Projetos Relevantes</h2>
+<section class="stack">
+  <h2>💻 Stack Tecnológica</h2>
+  <ul>
+    <li>PHP</li>
+    <li>Node.js</li>
+    <li>MongoDB</li>
+    <li>Vue.js</li>
+    <li>React Native</li>
+    <li>Express</li>
+    <li>Tailwind</li>
+    <li>JWT</li>
+  </ul>
+</section>
 
-      <div class="projeto">
-        <h3>🌸 Loja Florescer - API REST</h3>
-        <p>API para e-commerce com autenticação JWT, produtos, usuários e pedidos.</p>
-        <a href="https://github.com/ReinaldMendes/LojaFlorescer" target="_blank">Ver no GitHub</a>
-      </div>
+<section class="projects">
+  <h2>🚀 Projetos em Destaque</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <h3>Infoconectados</h3>
+      <p>Sistema completo para conexão entre clientes e prestadores. Inclui login, painel e avaliação.</p>
+      <a href="https://github.com/seuusuario/infoconectados" target="_blank">Ver no GitHub</a>
+    </div>
+    <div class="project">
+      <h3>LionsBet</h3>
+      <p>Plataforma de apostas com jogos como roleta, jackpot e placar. Backend em Node.js.</p>
+      <a href="https://github.com/seuusuario/lionsbet" target="_blank">Ver no GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Expedições Científicas</h3>
+      <p>Sistema de gerenciamento de expedições com Vue + Node + MongoDB. Inclui deploy na Render.</p>
+      <a href="https://github.com/seuusuario/expedicoes" target="_blank">Ver no GitHub</a>
+    </div>
+  </div>
+</section>
 
-      <div class="projeto">
-        <h3>🍕 Gestão de Pizzaria</h3>
-        <p>Back-end completo para pedidos, clientes e controle financeiro.</p>
-        <a href="https://github.com/ReinaldMendes/GestaoPizzariaNode" target="_blank">Ver no GitHub</a>
-      </div>
+<section class="contact">
+  <h2>📬 Contato</h2>
+  <p>Vamos conversar? Entre em contato pelo WhatsApp ou e-mail:</p>
+  <a href="https://wa.me/55SEUNUMERO" target="_blank">Falar no WhatsApp</a>
+</section>
 
-      <div class="projeto">
-        <h3>🔗 Infoconectados</h3>
-        <p>Plataforma de conexão entre clientes e prestadores, com login e dashboard.</p>
-          <a href="https://github.com/ReinaldMendes/InfoconectadosPhp" target="_blank">Ver no GitHub</a>  
-      </div>
+<footer>
+  © 2025 Reinald Mendes • Desenvolvedor Fullstack
+</footer>
 
-      <div class="projeto">
-        <h3>🔬 Sistema de Expedições Científicas</h3>
-        <p>Gerenciamento de rotas e equipes com dashboards em tempo real.</p>
-        <a href="https://github.com/ReinaldMendes/GestaoExpedicao" target="_blank">Ver no GitHub</a>
-      </div>
-
-      <div class="projeto">
-        <h3>📊 Dashboards Legislativos</h3>
-        <p>Visualizações com Power BI e Python para mandatos parlamentares.</p>
-         <a href="https://github.com/ReinaldMendes/DashBoard_Eleicoes" target="_blank">Ver no GitHub</a>
-      </div>
-    </section>
-
-    <section class="stack">
-      <h2>Stack Principal</h2>
-      <ul>
-        <li><strong>Back-End:</strong> Node.js, PHP, Express.js</li>
-        <li><strong>Front-End:</strong> Vue.js, React Native, HTML/CSS</li>
-        <li><strong>Banco de Dados:</strong> MongoDB, MySQL, Postgress</li>
-        <li><strong>Ferramentas:</strong> Power BI, Python, Git, Trello</li>
-        <li><strong>Metodologias:</strong> Scrum, Kanban</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Reinald Mendes dos Santos</p>
-  </footer>
 </body>
 </html>
