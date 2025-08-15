@@ -19,7 +19,7 @@
       text-align: center;
     }
     header h1 {
-      font-size: 2em;
+      font-size: 2.2em;
       margin: 0;
     }
     header p {
@@ -32,37 +32,48 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    .stack, .projects, .contact {
-      margin-bottom: 40px;
+    h2 {
+      border-left: 6px solid #1a1a1a;
+      padding-left: 10px;
+      margin-bottom: 20px;
     }
-    .stack ul {
+    .stack ul, .certificates ul {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
       padding: 0;
     }
-    .stack li {
+    .stack li, .certificates li {
       background: #e0e0e0;
       border-radius: 20px;
       padding: 10px 20px;
       margin: 5px;
       font-weight: bold;
     }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .experience, .projects, .contact {
+      margin-bottom: 40px;
     }
-    .project {
+    .experience-item, .project {
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
-    .project h3 {
+    .experience-item h3, .project h3 {
       margin-top: 0;
     }
-    .project a {
+    .experience-item span {
+      font-style: italic;
+      color: #555;
+    }
+    .experience-item p, .project p {
+      margin: 10px 0;
+    }
+    .experience-item ul, .project ul {
+      padding-left: 20px;
+    }
+    .project a, .contact a {
       text-decoration: none;
       color: #007BFF;
     }
@@ -73,7 +84,6 @@
       color: #fff;
       padding: 12px 24px;
       border-radius: 30px;
-      text-decoration: none;
     }
     footer {
       text-align: center;
@@ -90,6 +100,16 @@
   <p>Desenvolvedor Fullstack • PHP • Node.js • Vue • React Native • MongoDB</p>
 </header>
 
+<section class="about">
+  <h2>👨‍💻 Sobre</h2>
+  <p>Sou um profissional apaixonado por tecnologia e inovação, com sólida experiência em desenvolvimento de sistemas, análise de dados e criação de soluções tecnológicas personalizadas.</p>
+  <ul>
+    <li>Habilidades Técnicas: Full Stack (Node.js, PHP, React-native), análise e visualização de dados (Python, Power BI), integração de sistemas.</li>
+    <li>Resultados Entregues: Transformei dados complexos em insights estratégicos, otimizando processos e gerando eficiência em projetos legislativos e empresariais.</li>
+    <li>Diferenciais: Capacidade de traduzir problemas em soluções práticas, abordagem centrada no usuário e atenção aos detalhes.</li>
+  </ul>
+</section>
+
 <section class="stack">
   <h2>💻 Stack Tecnológica</h2>
   <ul>
@@ -101,7 +121,45 @@
     <li>Express</li>
     <li>Tailwind</li>
     <li>JWT</li>
+    <li>Python</li>
+    <li>Power BI</li>
   </ul>
+</section>
+
+<section class="experience">
+  <h2>🛠 Experiência Profissional</h2>
+
+  <div class="experience-item">
+    <h3>Software Engineer • LionsStartups</h3>
+    <span>abr de 2025 - o momento • Meio período</span>
+    <p>Atuo como Engenheiro de Software Júnior na startup Vida Exames, contribuindo no desenvolvimento de sistemas CRM médicos e SaaS voltados à gestão de exames, pacientes e convênios.</p>
+    <ul>
+      <li>PHP, Laravel, Node.js, MongoDB, Vue.js, Tailwind</li>
+      <li>Desenvolvimento de dashboards e integração front-end/back-end</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Coordenador do Selo Social • Prefeitura Municipal de Ponta Grossa</h3>
+    <span>jan de 2025 - o momento • Meio período</span>
+    <p>Coordenação do programa Selo Social na Secretaria Municipal da Família e Desenvolvimento Social.</p>
+    <ul>
+      <li>Análise de dados e otimização de processos</li>
+      <li>Liderança de equipe</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <h3>Desenvolvedor Fullstack • Fácil LGPD</h3>
+    <span>mar de 2025 - mar de 2025 • 1 mês</span>
+    <p>Desenvolvimento de aplicações web remotas com foco em conformidade LGPD.</p>
+  </div>
+
+  <div class="experience-item">
+    <h3>Assessor Parlamentar • Câmara Municipal de Ponta Grossa</h3>
+    <span>jan de 2023 - jan de 2025 • Meio período</span>
+    <p>Implantei dashboards interativos que reduziram o tempo de análise de dados em projetos legislativos e desenvolvi soluções tecnológicas para otimizar o mandato.</p>
+  </div>
 </section>
 
 <section class="projects">
@@ -125,10 +183,27 @@
   </div>
 </section>
 
+<section class="certificates">
+  <h2>📜 Cursos e Certificações</h2>
+  <ul>
+    <li>Liderança e Tecnologia • Lions Startups</li>
+    <li>Aplicações Práticas da Inteligência Artificial • DIO</li>
+    <li>Introdução à Engenharia de Prompts • DIO</li>
+    <li>Processamento de Linguagem Natural • DIO</li>
+    <li>Google: Inteligência Artificial e Produtividade • Google</li>
+    <li>Análise de Dados com Python • Escola DNC</li>
+    <li>SQL para Análise de Dados • Escola DNC</li>
+    <li>Power BI e Excel • Escola DNC</li>
+    <li>Inteligência de Mercado • Escola DNC</li>
+    <li>Registro Profissional de Jornalista • Trabalho e Emprego</li>
+  </ul>
+</section>
+
 <section class="contact">
   <h2>📬 Contato</h2>
   <p>Vamos conversar? Entre em contato pelo WhatsApp ou e-mail:</p>
   <a href="https://wa.me/5542991462593" target="_blank">Falar no WhatsApp</a>
+  <p>E-mail: reinald_30_2009@hotmail.com</p>
 </section>
 
 <footer>
