@@ -11,6 +11,16 @@ body {
   color: #333;
   padding: 20px;
 }
+.profile-photo {
+  width: 120px;       /* tamanho da foto */
+  height: 120px;      /* tamanho da foto */
+  border-radius: 50%; /* deixa redondo */
+  object-fit: cover;  /* mantém proporção da imagem */
+  display: block;
+  margin: 0 auto 20px auto; /* centraliza e dá espaçamento abaixo */
+  border: 3px solid #fff;   /* opcional: borda branca ao redor */
+}
+
 
 header {
   text-align: center;
