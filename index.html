@@ -113,11 +113,14 @@ section{padding:96px 0}
 
 /* services */
 .svc{border-top:1px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:.9fr 1.3fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
-.svc-row h3{font-size:1.35rem;font-weight:600}
-.svc-row p{color:var(--muted);max-width:60ch}
-.svc-row ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-.svc-row li{font-size:.8rem;padding:4px 11px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.svc-card:hover{border-color:color-mix(in srgb,var(--primary) 70%,var(--line));box-shadow:0 24px 60px -30px var(--glow)}
+.svc-shot{position:relative;aspect-ratio:16/11;overflow:hidden;border-bottom:1px solid var(--line)}
+.svc-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.svc-body h3{font-size:1.14rem;font-weight:600}
+.svc-body p{color:var(--muted);font-size:.92rem}
+.svc-body .tags{margin-top:auto;padding-top:8px}
 
 /* portfolio */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
@@ -212,6 +215,34 @@ section{padding:96px 0}
 .m-gas .ov span{font-size:.58rem;color:#5f6b63}
 .m-gas .don{width:46px;height:46px;border-radius:50%;background:conic-gradient(#1E8E3E 0 62%,#FBBC04 0 84%,#EA4335 0);position:relative;margin:0 auto}
 .m-gas .don::after{content:"";position:absolute;inset:11px;background:#fff;border-radius:50%}
+/* Serviços — mini painel de gestão */
+.m-svc-sys{background:#0B1230;flex-direction:column}
+.m-svc-sys .top{display:flex;justify-content:space-between;align-items:center;padding:9% 8% 0;font:600 .62rem var(--mono);color:#7387c7}
+.m-svc-sys .top i{width:6px;height:6px;border-radius:50%;background:#2DE2C6;margin-right:6px}
+.m-svc-sys .kp{display:flex;gap:6%;padding:6% 8% 0}
+.m-svc-sys .kp div{flex:1;background:rgba(255,255,255,.04);border:1px solid #1f2c5c;border-radius:9px;padding:9% 8%}
+.m-svc-sys .kp b{display:block;font:600 1.15rem var(--display);color:#E9EEFF}
+.m-svc-sys .kp span{display:block;font-size:.6rem;color:#7387c7;margin-top:3px}
+.m-svc-sys .ch{margin:6% 8% 0;height:34%;display:flex;align-items:flex-end;gap:4%}
+.m-svc-sys .ch i{flex:1;background:linear-gradient(180deg,#4C7DFF,#2DE2C6);border-radius:3px 3px 0 0;opacity:.85}
+/* Serviços — mini vitrine e-commerce */
+.m-svc-shop{background:#F4F1EC;flex-direction:column}
+.m-svc-shop .top{display:flex;justify-content:space-between;align-items:center;padding:8% 8% 0;font:600 .68rem var(--display);color:#2b2620}
+.m-svc-shop .top span{font:500 .58rem var(--body);color:#8a8175;border:1px solid #ddd6c8;border-radius:99px;padding:2px 8px}
+.m-svc-shop .row{display:flex;gap:5%;padding:6% 8% 0}
+.m-svc-shop .p{flex:1;background:#fff;border:1px solid #e6e0d2;border-radius:9px;overflow:hidden}
+.m-svc-shop .p i{display:block;aspect-ratio:1;background:var(--sw)}
+.m-svc-shop .p b{display:block;height:6px;width:70%;background:#d8d0bd;border-radius:3px;margin:8% 8% 4%}
+.m-svc-shop .p span{display:block;font:600 .6rem var(--mono);color:#4C6A3C;margin:0 8% 8%}
+/* Serviços — mini planilha/automação */
+.m-svc-auto{background:#FAFBFC;flex-direction:column}
+.m-svc-auto .top{display:flex;align-items:center;gap:8px;padding:7% 7%;font:600 .62rem var(--body);color:#3c4a3f;border-bottom:1px solid #e2e6e0}
+.m-svc-auto .top i{width:8px;height:8px;border-radius:2px;background:#1E8E3E}
+.m-svc-auto .sh{flex:1;position:relative;background-image:linear-gradient(#e4e8e2 1px,transparent 1px),linear-gradient(90deg,#e4e8e2 1px,transparent 1px);background-size:100% 17%,20% 100%}
+.m-svc-auto .fl{position:absolute;left:6%;right:6%;top:16%;display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #dfe4dc;border-radius:7px;padding:5% 6%;font:600 .58rem var(--mono);color:#3c4a3f;box-shadow:0 6px 16px -10px rgba(0,0,0,.3)}
+.m-svc-auto .fl b{width:14px;height:14px;border-radius:4px;background:#1E8E3E;flex:none}
+.m-svc-auto .fl2{top:46%}
+.m-svc-auto .fl2 b{background:#F2A03D}
 
 /* process */
 .proc{background:var(--bg2);border-block:1px solid var(--line)}
@@ -252,10 +283,22 @@ section{padding:96px 0}
 footer{padding:34px 0 46px;color:var(--muted);font-size:.86rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+/* WhatsApp flutuante */
+.wa-float{position:fixed;right:20px;right:calc(20px + env(safe-area-inset-right,0px));bottom:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 28px -8px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset;text-decoration:none;transition:transform .18s}
+.wa-float:hover{transform:translateY(-2px) scale(1.04)}
+.wa-float svg{width:28px;height:28px;color:#fff}
+.wa-float .ping{position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.55;animation:wa-ping 2.4s ease-out infinite}
+.wa-float .tip{position:absolute;right:68px;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--surface);border:1px solid var(--line);color:var(--text);font-size:.82rem;font-weight:500;padding:8px 13px;border-radius:10px;box-shadow:0 12px 30px -14px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
+.wa-float:hover .tip,.wa-float:focus-visible .tip{opacity:1;transform:translateY(-50%) translateX(-4px)}
+@keyframes wa-ping{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(1.55);opacity:0}}
+@media (max-width:760px){.wa-float{width:52px;height:52px}.wa-float svg{width:25px;height:25px}.wa-float .tip{display:none}}
+@media (prefers-reduced-motion:reduce){.wa-float .ping{animation:none;display:none}}
+
 /* responsivo */
 @media (max-width:1000px){
   .hero .wrap{grid-template-columns:1fr;gap:44px;padding:56px 0 64px}
   .grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:1fr}
   .card.feature{grid-column:span 2}
   .steps{grid-template-columns:repeat(2,1fr);gap:36px 0}
   .steps::before{display:none}
@@ -270,7 +313,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .grid{grid-template-columns:1fr}
   .card.feature,.card.feature.flip{grid-column:auto;flex-direction:column}
   .card.feature .shot,.card.feature.flip .shot{aspect-ratio:16/10;min-height:0;flex:none;border:0;border-bottom:1px solid var(--line)}
-  .svc-row{grid-template-columns:1fr;gap:12px}
+  .svc-grid{grid-template-columns:1fr}
   .kpis{grid-template-columns:repeat(2,1fr)}
   .kpi:nth-child(2){border-right:0}
   .kpi:nth-child(-n+2){border-bottom:1px solid #1a2555}
@@ -291,8 +334,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <a class="brand" href="#topo" aria-label="Reinald Mendes — início">
       <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="var(--primary)" stroke-width="1.5"/>
-        <text x="19" y="26.5" text-anchor="middle" font-family="'Sora',sans-serif" font-weight="600" font-size="16.5" letter-spacing="-.02em" fill="var(--text)">RM</text>
-        <rect x="29" y="5" width="5" height="5" rx="1.4" fill="var(--accent)"/>
+        <path d="M8.7 36.6c.4-7.8 4.4-10.7 7.9-11.4l2.5 2.8 2.5-2.8c3.5.7 7.5 3.6 7.9 11.4Z" fill="var(--text)"/>
+        <rect x="16.7" y="22.7" width="4.6" height="4" fill="var(--text)"/>
+        <path d="M12.6 17.2c-.3-5.2 2.7-8.6 6.4-8.6s6.7 3.4 6.4 8.6c-.2 3.6-2.5 6.4-6.4 6.6-3.9-.2-6.2-3-6.4-6.6Z" fill="var(--text)"/>
+        <path d="M12.6 17.5q-1.7.1-1.6 2 .1 1.7 1.8 1.4Z" fill="var(--text)"/>
+        <path d="M25.5 17.5q1.7.1 1.6 2-.1 1.7-1.8 1.4Z" fill="var(--text)"/>
+        <path d="M12.9 14.5 15.6 13.7 14.5 17.5Z" fill="var(--bg)"/>
+        <path d="M25.1 14.5 22.4 13.7 23.5 17.5Z" fill="var(--bg)"/>
+        <path d="M15.6 19.3Q20 21.5 24.4 19.3 20 20 15.6 19.3Z" fill="var(--accent)"/>
+        <path d="M17.3 20.5Q20 24.2 22.7 20.5 20 22.5 17.3 20.5Z" fill="var(--accent)"/>
       </svg>
       <span><b>Reinald Mendes</b><small>Soluções em gestão e tecnologia</small></span>
     </a>
@@ -370,26 +420,58 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <p>Cada projeto começa pelo problema real da operação, não pela ferramenta.</p>
     </div>
     <div class="svc">
-      <div class="svc-row">
-        <h3>Sistemas de gestão sob medida</h3>
-        <div>
-          <p>Aplicações web para controlar cadastros, estoque, vendas, planejamento e relatórios, com perfis de acesso e dados organizados em um só lugar.</p>
-          <ul><li>Painéis e relatórios</li><li>Perfis de acesso</li><li>Multiusuário</li></ul>
-        </div>
-      </div>
-      <div class="svc-row">
-        <h3>Lojas virtuais e presença digital</h3>
-        <div>
-          <p>E-commerce completo com painel administrativo, upload de imagens, identidade visual e experiência rápida no celular (PWA), além de landing pages para o seu negócio.</p>
-          <ul><li>E-commerce</li><li>Painel admin</li><li>PWA</li><li>Identidade visual</li></ul>
-        </div>
-      </div>
-      <div class="svc-row">
-        <h3>Automação e planilhas inteligentes</h3>
-        <div>
-          <p>Google Sheets e Apps Script que viram sistemas: controle de presença, agendas, transporte, estoque e dashboards com indicadores, sem depender de instalar nada.</p>
-          <ul><li>Apps Script</li><li>Dashboards</li><li>Fluxos de aprovação</li></ul>
-        </div>
+      <div class="svc-grid">
+
+        <article class="svc-card">
+          <div class="svc-shot">
+            <div class="mk m-svc-sys">
+              <div class="top"><span><i></i>painel · operação</span><span>ao vivo</span></div>
+              <div class="kp"><div><b>128</b><span>cadastros</span></div><div><b>32</b><span>pendências</span></div></div>
+              <div class="ch"><i style="height:38%"></i><i style="height:60%"></i><i style="height:46%"></i><i style="height:78%"></i><i style="height:54%"></i><i style="height:88%"></i></div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Sistemas de gestão sob medida</h3>
+            <p>Aplicações web para controlar cadastros, estoque, vendas, planejamento e relatórios, com perfis de acesso e dados organizados em um só lugar.</p>
+            <div class="tags"><span>Painéis</span><span>Perfis de acesso</span><span>Multiusuário</span></div>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-shot">
+            <div class="mk m-svc-shop">
+              <div class="top">Sua Loja<span>catálogo</span></div>
+              <div class="row">
+                <div class="p"><i style="--sw:#E7D9C9"></i><b></b><span>R$ 89</span></div>
+                <div class="p"><i style="--sw:#D9C7DA"></i><b></b><span>R$ 129</span></div>
+                <div class="p"><i style="--sw:#C9D9CE"></i><b></b><span>R$ 59</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Lojas virtuais e presença digital</h3>
+            <p>E-commerce completo com painel administrativo, upload de imagens, identidade visual e experiência rápida no celular (PWA), além de landing pages para o seu negócio.</p>
+            <div class="tags"><span>E-commerce</span><span>Painel admin</span><span>PWA</span></div>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-shot">
+            <div class="mk m-svc-auto">
+              <div class="top"><i></i>Controle · Apps Script</div>
+              <div class="sh">
+                <div class="fl"><b></b>presença lançada</div>
+                <div class="fl fl2"><b></b>estoque atualizado</div>
+              </div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <h3>Automação e planilhas inteligentes</h3>
+            <p>Google Sheets e Apps Script que viram sistemas: controle de presença, agendas, transporte, estoque e dashboards com indicadores, sem depender de instalar nada.</p>
+            <div class="tags"><span>Apps Script</span><span>Dashboards</span><span>Fluxos</span></div>
+          </div>
+        </article>
+
       </div>
     </div>
   </div>
@@ -589,8 +671,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="id">
         <svg viewBox="0 0 40 40" aria-hidden="true">
           <rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="var(--primary)" stroke-width="1.5"/>
-          <text x="19" y="26.5" text-anchor="middle" font-family="'Sora',sans-serif" font-weight="600" font-size="16.5" letter-spacing="-.02em" fill="var(--text)">RM</text>
-          <rect x="29" y="5" width="5" height="5" rx="1.4" fill="var(--accent)"/>
+          <path d="M8.7 36.6c.4-7.8 4.4-10.7 7.9-11.4l2.5 2.8 2.5-2.8c3.5.7 7.5 3.6 7.9 11.4Z" fill="var(--text)"/>
+          <rect x="16.7" y="22.7" width="4.6" height="4" fill="var(--text)"/>
+          <path d="M12.6 17.2c-.3-5.2 2.7-8.6 6.4-8.6s6.7 3.4 6.4 8.6c-.2 3.6-2.5 6.4-6.4 6.6-3.9-.2-6.2-3-6.4-6.6Z" fill="var(--text)"/>
+          <path d="M12.6 17.5q-1.7.1-1.6 2 .1 1.7 1.8 1.4Z" fill="var(--text)"/>
+          <path d="M25.5 17.5q1.7.1 1.6 2-.1 1.7-1.8 1.4Z" fill="var(--text)"/>
+          <path d="M12.9 14.5 15.6 13.7 14.5 17.5Z" fill="var(--bg)"/>
+          <path d="M25.1 14.5 22.4 13.7 23.5 17.5Z" fill="var(--bg)"/>
+          <path d="M15.6 19.3Q20 21.5 24.4 19.3 20 20 15.6 19.3Z" fill="var(--accent)"/>
+          <path d="M17.3 20.5Q20 24.2 22.7 20.5 20 22.5 17.3 20.5Z" fill="var(--accent)"/>
         </svg>
         <div><b>Reinald Mendes</b><span>Ponta Grossa, PR</span></div>
       </div>
@@ -644,6 +733,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <span>Ponta Grossa, PR</span>
   </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/5542991562593?text=Ol%C3%A1%20Reinald%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="ping" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.44 1.28 4.9L2 22l5.31-1.39a9.87 9.87 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.67c2.19 0 4.24.85 5.78 2.4a8.2 8.2 0 0 1 2.41 5.84c0 4.55-3.7 8.24-8.19 8.24a8.2 8.2 0 0 1-4.17-1.14l-.3-.18-3.15.83.84-3.07-.2-.32a8.15 8.15 0 0 1-1.26-4.36c0-4.55 3.7-8.24 8.24-8.24Zm-4.5 4.57c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.7 2.72 4.21 3.71 2.08.83 2.5.66 2.96.62.46-.04 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.11-.22-.17-.46-.29-.24-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.56.12-.16.24-.64.81-.79.98-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.5.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.56-1.36-.77-1.86-.2-.48-.4-.42-.56-.42Z"/></svg>
+  <span class="tip">Falar no WhatsApp</span>
+</a>
 
 <script>
 (function(){
